@@ -200,11 +200,9 @@ export default function NBAFantasyAnalyzer() {
       const data = await response.json();
       setSearchResults(data.data || []);
     } catch (err) {
-      const filtered = DEMO_PLAYERS.filter(p =>
-        `${p.first_name} ${p.last_name}`.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-      setSearchResults(filtered);
-      setDataMode('demo');
+      console.error('Search error:', err);
+      setSearchResults([]);
+      setError('Search failed. Please try again.');
     } finally {
       setIsSearching(false);
     }
