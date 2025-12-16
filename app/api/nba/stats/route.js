@@ -30,27 +30,3 @@ export async function GET(request) {
     return NextResponse.json({ error: 'Failed to fetch stats' }, { status: 500 });
   }
 }
-```
-
-4. Click **"Commit changes"** → **"Commit changes"**
-
----
-
-## ✅ After All Files Are Added
-
-Your GitHub repository should look like this:
-```
-├── .gitignore
-├── README.md
-├── next.config.js
-├── package.json
-└── app/
-    ├── globals.css
-    ├── layout.js
-    ├── page.js
-    └── api/
-        └── nba/
-            ├── players/
-            │   └── route.js
-            └── stats/
-                └── route.js
